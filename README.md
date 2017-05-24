@@ -1,1 +1,0 @@
-# GitFit-Template

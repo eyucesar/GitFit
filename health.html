@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+	<title>GitFit</title>
+	<link rel="shortcut icon" href="assets/images/gitfit_favicon.png"/>
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  	<script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|PT+Sans|Ubuntu" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+</head>
+<body>
+
+	<nav class="navbar navbar-default navbar-fixed-top">
+  		<div class="container-fluid">
+    		<div class="navbar-header">
+      		<a class="logoimage" href="index.html"><img src="assets/images/gitfit_logo.png"/></a>
+    		</div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="index.html">Body</a></li>
+          <li><a href="health.html">Health</a></li>
+          <li><a href="recipes.html">Recipes</a></li>
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+
+        <br><br><h2>BMI Calculator</h2><br>
+        <form action="">
+          <div class="form-group">
+            <input type="weight" class="form-control" id="weight" placeholder="weight in lb" name="email">
+          </div>
+          <div class="form-group">
+            <input type="height" class="form-control" id="height" placeholder="height in cm" name="height">
+          </div>
+          <button type="button" class="btn btn-default" id="BMIsubmit">Submit</button>
+          <div class="form-group"><br>
+            <input type="bmi" class="form-control" id="bmi" placeholder="Result" name="bmi">
+          </div>
+        </form>
+      </div>
+
+      <div class="col-md-4"><br><br>
+        <div class="container" id="collapseArea"><br>
+        <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo" id="collapseButton">BMI Calculator</button><br><br>
+        <div id="demo" class="collapse"><br>
+        <form action="">
+          <div class="form-group">
+            <input type="weight" class="form-control" id="weight" placeholder="weight in lb" name="email">
+          </div>
+          <div class="form-group">
+            <input type="height" class="form-control" id="height" placeholder="height in cm" name="height">
+          </div>
+          <button type="button" class="btn btn-default" id="BMIsubmit">Submit</button>
+          <div class="form-group"><br>
+            <input type="bmi" class="form-control" id="bmi" placeholder="Result" name="bmi">
+          </div>
+        </form>
+        </div>
+      </div>
+    </div>
+    
+  </div><br>
+</div>
+
+<br><br><footer></footer><br>
+
+
+    <script src="assets/javascript/app.js"></script>
+</body>
+</html>

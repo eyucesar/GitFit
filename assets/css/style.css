@@ -1,0 +1,174 @@
+* {
+	border-radius: 10px;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: #fafff2;
+	font-family: "Open Sans", sans-serif, Arial;
+	padding-top: 130px;
+}
+
+.container-fluid {
+	background-color: #e8f9ff;
+	border-bottom: 1px solid #b8dfed;
+	height: 110px;
+}
+
+.navbar-default .navbar-nav>li>a {
+	font-family: "Open Sans", sans-serif, Arial;
+	font-size: 24px;
+	font-weight: bolder;
+	color: #0189ba;
+	padding-top: 40px;
+}
+
+img {
+	box-sizing: border-box;
+	padding: 18px;
+}
+
+h1 {
+	text-align: center;
+	font-family: "Open Sans", sans-serif, Arial;
+	color: black;
+	font-weight: bolder;
+}
+
+h1, h5 {
+	font-size: 18px;
+}
+
+h5 {
+	color: black;
+	font-weight: bolder;
+	margin-left: 50px;
+}
+
+#anatomy {
+	display: block;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #c9c7c7;
+    width: 100%;
+    border-radius: 10px;
+    margin: 0 0 10px 10px;
+}
+
+.input-group-btn:last-child>.btn, .input-group-btn:last-child>.btn-group {
+	font-size: 20px;
+	background-color: #00B0EF;
+	color: white;
+	border: 1px solid #00B0EF;
+}
+
+.input-group .form-control:first-child {
+	height: 42px;
+	width: 300px;
+}
+
+input.form-control {
+	border: 1px solid #00B0EF;
+}
+
+.container {
+	background-color: #cfeda1;
+	width: 94%;
+	height: 100%;
+	border: 1px solid #b6d684;
+}
+
+footer {
+	text-align: center;
+	font-size: 12px;
+	color: black;
+}
+
+#BMIsubmit {
+	background-color: #00B0EF;
+	color: white;
+	border: none;
+}
+
+input[type=radio] {
+	margin-left: 10px;
+}
+
+#toggleBody {
+    text-align: center;
+}
+
+.btn-female {
+	background-color: #00B0EF;
+	border: 1px solid #00B0EF;
+	color: white;
+	font-size: 16px;
+}
+
+.btn-success {
+	font-size: 16px;
+}
+
+.btn-danger.active, .btn-female:active, .open>.dropdown-toggle.btn-danger, .btn-female:hover {
+	background-color: #018bbc;
+	border: 1px solid #018bbc;
+	color: white;
+}
+
+#search:hover, #search:focus {
+	background-color: #018bbc;
+	border: 1px solid #018bbc;
+	outline: 0;
+}
+
+.input-group-btn {
+	display: inline block;
+	width: 100%;
+}
+
+.input-group {
+	width: 100%;
+}
+
+.input-group > .form-control {
+      width: 100%;
+}
+
+h3 {
+	padding-left: 20px;
+	color: #018bbc;
+	font-weight: bolder;
+	font-size: 18px;
+}
+
+h2 {
+	font-weight: bolder;
+	font-size: 18px;
+}
+
+a {
+	color: black;
+	text-decoration: none; 
+	padding-left: 20px;
+}
+
+#collapseArea {
+	background-color: #fafff2;
+}
+
+#collapseButton {
+	font-size: 16px;
+	background-color: #00B0EF;
+	display: block;
+	margin: auto 0;
+}
+
+#glute {
+	margin: 0 10px 10px 0;
+	background-color: #00B0EF;
+	display: inline;
+}
+
+@media screen and (max-width: 640px) {
+
+}
