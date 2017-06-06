@@ -141,8 +141,14 @@ $(document).ready(function () {
   // Let's define our first command. First the text we expect, and then the function it should call
   var commands = {
     'Hamstring': function() {
-      muscle = Hamstring;
-      displayExercise(muscle);
+      muscle = 'Hamstring';
+      for (var i = 0; i < muscleName.length; i++) {
+        if (muscle === muscleName[i]) {
+        //testing
+        console.log("sound test loop");
+        muscle = commands[0];
+        displayExercise(muscle);
+      }
     }
   };
 
@@ -151,9 +157,9 @@ $(document).ready(function () {
 
   // Start listening. You can call this here, or attach this call to an event, button, etc.
   annyang.start();
-}
+};
 
-});
+};
 
 
 
