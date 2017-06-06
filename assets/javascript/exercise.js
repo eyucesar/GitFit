@@ -140,8 +140,9 @@ $(document).ready(function () {
   if (annyang) {
   // Let's define our first command. First the text we expect, and then the function it should call
   var commands = {
-    'hamstring exercises': function() {
-      $("#exerciseSpace").append("Hamstring exercises will go here on voice command!");
+    'chest exercises': function() {
+      $("#exerciseSpace").append("Chest exercises will go here on voice command!");
+      console.log("sound test");
     }
   };
 
