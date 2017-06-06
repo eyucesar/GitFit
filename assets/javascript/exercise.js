@@ -143,7 +143,6 @@ $(document).ready(function () {
     'chest exercises': function() {
       $("#exerciseSpace").append("Chest exercises will go here on voice command!");
       console.log("sound test");
-      displayExercise(chest);
     }
   };
 
