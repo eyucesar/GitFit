@@ -1,26 +1,29 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
-	<title>GitFit</title>
-	<link rel="shortcut icon" href="assets/images/gitfit_favicon.png"/>
-  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-  	<script src="https://code.jquery.com/jquery.js"></script>
-  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <meta charset="UTF-8">
+  <title>GitFit</title>
+  <link rel="shortcut icon" href="assets/images/gitfit_favicon.png"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans|PT+Sans|Ubuntu" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
-	<script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
+    <link href = "https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css"
+   rel = "stylesheet">
+    <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
+    <script type="text/javascript" src="http://davidlynch.org/projects/maphilight/jquery.maphilight.js"></script>
 </head>
 <body>
 
-	<nav class="navbar navbar-default navbar-fixed-top">
-  		<div class="container-fluid">
-    		<div class="navbar-header">
-      		<a class="logoimage" href="index.html"><img src="assets/images/gitfit_logo.png"/></a>
-    		</div>
+  <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a href="index.html"><img id="logo" src="assets/images/gitfit_logo.png"/></a>
+        </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -36,31 +39,93 @@
    <div class="container">
     <div class="row">
       <div class="col-md-6">
-      	<br><h1>Pick a muscle group to view exercises</h1><br><br>
-      	<img id="anatomy" src="assets/images/human_body.png" alt="human body"/><br>
-      	<div id="toggleBody"><input type="checkbox" checked data-toggle="toggle" data-on="Male" data-off="Female" data-onstyle="success" data-offstyle="female"></div>
+        <br><h1>Pick a muscle group to view exercises</h1><br><br>
+        <img id="anatomy" src="assets/images/male-body.png" alt="male body" usemap="#ImageMapmapAreas"/>
+          <map id="ImageMapmapAreas" name="ImageMapmapAreas">
+            <area target="" alt="traps" title="traps" href="#traps1" class="Trapezius" coords="117,73,121,81,125,93,118,90,111,90,99,88,109,81" shape="poly">
+            <area target="" alt="traps" title="traps" href="#traps2" class="Trapezius" coords="146,70,148,79,153,84,161,85,147,91,136,94,139,83" shape="poly">
+            <area target="" alt="traps" title="traps" href="#traps3" class="Trapezius" coords="387,79,403,58,419,59,428,70,440,78,446,92,459,101,456,118,445,117,433,114,425,118,410,116,400,117,391,116,384,119,374,119,368,119,366,107,372,94,382,87" shape="poly">
+            <!-- Shoulders -->
+            <area id="shoulder1" target="" alt="shoulder" title="shoulder" href="#" class="Shoulder" coords="72,100,78,94,88,90,96,88,107,91,100,97,93,105,88,114,85,121,78,122,74,127,67,128,68,112" shape="poly">
+            <area id="shoulder2" target="" alt="shoulder" title="shoulder" href="#" class="Shoulder" coords="155,95,158,89,165,88,173,88,183,92,191,101,193,113,192,121,183,121,177,120,173,109,167,100" shape="poly">
+            <area id="shoulder3" target="" alt="shoulder" title="shoulder" href="#" class="Shoulder" coords="352,93,357,88,365,85,373,82,384,81,383,89,376,94,370,99,366,106,361,110,355,112,348,117,348,110,348,102" shape="poly">
+            <area id="shoulder4" target="" alt="shoulder" title="shoulder" href="#" class="Shoulder" coords="442,80,450,78,458,78,468,84,475,93,477,105,479,120,473,116,468,112,461,109,459,101,455,96,446,92,442,87" shape="poly">
+            <!-- Chest -->
+            <area target="" alt="chest" title="chest" href="#chest1" class="Chest" coords="108,96,115,96,124,102,129,115,130,125,123,130,113,131,101,131,92,127,87,123,90,115,94,107,99,100" shape="poly">
+            <area target="" alt="chest" title="chest" href="#chest2" class="Chest" coords="142,98,150,95,160,97,169,103,175,111,176,120,169,127,159,131,150,132,140,130,135,126,134,118,134,110,137,104" shape="poly">
+            <!-- Abs -->
+            <area target="" alt="abs" title="abs" href="#abs" class="Abs" coords="131,133,136,130,142,131,151,132,153,141,154,152,154,162,154,171,151,183,148,197,147,207,146,225,140,232,133,234,124,231,116,221,114,207,113,195,111,183,108,172,106,159,106,149,107,140,110,133,122,131" shape="poly">
+            <!-- Biceps -->
+            <area target="" alt="bicep" title="bicep" href="#bicep1" class="Biceps" coords="66,130,72,130,77,126,82,121,88,125,89,134,89,144,86,151,80,159,72,162,64,167,62,160,61,154,60,146,62,139" shape="poly">
+            <area target="" alt="bicep" title="bicep" href="#bicep2" class="Biceps" coords="172,126,176,122,182,119,191,124,198,130,200,139,201,149,198,166,189,162,182,159,177,153,175,143" shape="poly">
+            <!-- Obliques -->
+            <area target="" alt="oblique" title="oblique" href="#oblique1" class="Obliques" coords="90,128,97,130,110,131,106,143,106,150,107,163,109,174,112,185,114,197,114,208,115,218,110,213,103,208,95,203,93,197,93,187,94,178,96,162,94,149,90,142,89,135" shape="poly">
+            <area target="" alt="oblique" title="oblique" href="#oblique2" class="Obliques" coords="153,132,164,128,171,125,173,132,175,141,169,149,167,159,167,170,169,183,171,197,165,204,159,208,154,215,149,222,147,213,150,194,155,172,155,150" shape="poly">
+            <area target="" alt="oblique" title="oblique" href="#oblique3" class="Obliques" coords="374,162,383,172,388,184,388,193,377,195,377,181" shape="poly">
+            <area target="" alt="oblique" title="oblique" href="#oblique4" class="Obliques" coords="439,176,444,167,450,165,449,183,450,195,444,193,437,195,436,185" shape="poly">
+            <!-- Quads -->
+            <area target="" alt="quads" title="quads" href="#quad1" class="Quads" coords="101,209,109,215,117,224,127,233,126,255,122,282,117,307,107,305,100,298,93,304,87,295,81,281,78,268,78,247,87,240,96,229" shape="poly">
+            <area target="" alt="quads" title="quads" href="#quad2" class="Quads" coords="136,236,145,228,151,219,162,209,163,221,170,232,181,242,182,259,182,275,176,293,169,303,163,296,154,306,147,311,147,303,140,289,136,270,134,255" shape="poly">
+            <!-- Calves -->
+            <area target="" alt="calves" title="calves" href="#calves1" class="Calves" coords="111,336,111,351,108,365,103,381,96,400,95,382,95,367,100,349" shape="poly">
+            <area target="" alt="calves" title="calves" href="#calves2" class="Calves" coords="154,337,162,349,168,365,170,384,170,400,161,386,152,372,151,352" shape="poly">
+            <area target="" alt="calves" title="calves" href="#calves3" class="Calves" coords="361,320,374,314,379,330,384,338,382,349,382,377,379,383,368,381,364,373,353,381,350,371,354,351,359,340" shape="poly">
+            <area target="" alt="calves" title="calves" href="#calves4" class="Calves" coords="442,339,446,364,445,375,447,382,454,381,460,371,467,376,476,378,471,356,464,339,467,324,453,311" shape="poly">
+           <!-- Lats -->
+            <area target="" alt="lat" title="lat" href="#lat1" class="Lats" coords="368,122,379,123,391,120,403,121,410,122,412,149,403,154,398,164,395,181,389,188,386,175,375,163,371,144" shape="poly">
+            <area target="" alt="lat" title="lat" href="#lat2" class="Lats" coords="412,123,424,121,433,118,442,121,455,123,453,139,451,162,443,170,439,177,437,189,431,184,432,168,427,160,421,153,413,152,413,139" shape="poly">
+            <!-- Triceps -->
+            <area target="" alt="tricep" title="tricep" href="#tricep1" class="Triceps" coords="347,117,354,111,364,107,370,132,361,151,350,157,350,149,350,141,343,143,342,152,340,160,336,151,342,132" shape="poly">
+            <area target="" alt="tricep" title="tricep" href="#tricep2" class="Triceps" coords="460,109,471,110,479,118,485,131,489,145,483,160,480,148,478,139,472,140,474,149,478,156,473,162,463,152,455,133,458,120" shape="poly">
+            <!-- Glutes -->
+            <area target="" alt="glutes" title="glutes" href="#glutes" class="Glutes" coords="392,195,400,197,410,204,413,210,418,202,427,198,437,195,447,201,451,213,454,226,453,238,449,248,436,251,425,251,417,251,413,243,408,252,394,254,380,251,375,242,371,229,370,220,379,206" shape="poly">
+            <!-- Hamstrings -->
+            <area target="" alt="hamstring" title="hamstring" href="#hamstring1" class="Hamstring" coords="370,228,372,239,379,249,394,252,406,254,406,274,404,289,400,296,396,313,393,328,387,337,375,321,376,312,361,319,366,308,365,290,363,271,363,246,365,237" shape="poly">
+            <area target="" alt="hamstring" title="hamstring" href="#hamstring2" class="Hamstring" coords="416,253,447,251,457,228,461,237,461,267,460,291,466,320,459,317,452,312,449,324,441,338,431,323,426,296,418,278" shape="poly">
+          </map>
+        <input id="toggleBody" type="checkbox" checked data-toggle="toggle" data-on="Male" data-off="Female" data-onstyle="success" data-offstyle="female">
       </div>
 
       <div class="col-md-1"></div>
 
       <div class="col-md-5"><br><h5>Or search by muscle group</h5><br><br>
-		<div class="input-group">
-            <input type="text" class="form-control" placeholder="abs, chest, shoulders...">
-            <span class="input-group-btn">
-            	<button class="btn btn-default" type="button" id="muscleSearch">Go</button>
-            </span>
-        </div><br><br>
-        <div id="exerciseSpace"></div>
-	</div>
+    
+      <div class="dropdown">
+          <button class="btn btn-default dropdown-toggle" type="button" id="muscleMenu" data-toggle="dropdown">Muscle Groups
+          <span class="caret"></span></button>
+          <ul class="dropdown-menu" id="menu" role="menu" aria-labelledby="muscleMenu">
+            <li class="muscleGroups" role="presentation"><a role="menuitem" tabindex="-1" href="#">Biceps</a></li>
+            <li class="muscleGroups" role="presentation"><a role="menuitem" tabindex="-1" href="#">Shoulder</a></li>
+            <li class="muscleGroups" role="presentation"><a role="menuitem" tabindex="-1" href="#">Ribs</a></li>
+            <li class="muscleGroups" role="presentation"><a role="menuitem" tabindex="-1" href="#">Chest</a></li>
+            <li class="muscleGroups" role="presentation"><a role="menuitem" tabindex="-1" href="#">Triceps</a></li>
+            <li class="muscleGroups" role="presentation"><a role="menuitem" tabindex="-1" href="#">Abs</a></li>
+            <li class="muscleGroups" role="presentation"><a role="menuitem" tabindex="-1" href="#">Calves</a></li>
+            <li class="muscleGroups" role="presentation"><a role="menuitem" tabindex="-1" href="#">Glutes</a></li>
+            <li class="muscleGroups" role="presentation"><a role="menuitem" tabindex="-1" href="#">Trapezius</a></li>
+            <li class="muscleGroups" role="presentation"><a role="menuitem" tabindex="-1" href="#">Quads</a></li>
+            <li class="muscleGroups" role="presentation"><a role="menuitem" tabindex="-1" href="#">Hamstring</a></li>
+            <li class="muscleGroups" role="presentation"><a role="menuitem" tabindex="-1" href="#">Lats</a></li>
+            <li class="muscleGroups" role="presentation"><a role="menuitem" tabindex="-1" href="#">Brachialis</a></li>
+            <li class="muscleGroups" role="presentation"><a role="menuitem" tabindex="-1" href="#">Obliques</a></li>
+            <li class="muscleGroups" role="presentation"><a role="menuitem" tabindex="-1" href="#">Soleus</a></li>
+          </ul>
+        </div>
 
-	
-	
+
+        <br>
+        <div id="exerciseSpace"></div>
+  </div>
 
     </div><br><br>
   </div>
 
-  <br><br><footer>&copy;2017 Ebru Yucesar, Anuradha Ramachandra, Rachel Vaughan, Racquel Rodriguez, Jamie Gelo</footer><br>
+  <br><footer>&copy;2017 Ebru Yucesar, Anuradha Ramachandra, Rachel Vaughan, Raquel Rodriguez, Jamie Gelo</footer><br>
 
-    <script src="assets/javascript/app.js"></script>
+    <script src="assets/javascript/index.js"></script>
+    <script src="assets/javascript/health.js"></script>
+    <script src="assets/javascript/recipes.js"></script>
+    <script src="assets/javascript/exercise.js"></script>
+
 </body>
 </html>

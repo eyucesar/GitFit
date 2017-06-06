@@ -1,81 +1,276 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <meta charset="UTF-8">
-	<title>GitFit</title>
-	<link rel="shortcut icon" href="assets/images/gitfit_favicon.png"/>
-  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-  	<script src="https://code.jquery.com/jquery.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans|PT+Sans|Ubuntu" rel="stylesheet">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <title>GitFit</title>
+  <!-- dumbell image -->
+  <link rel="shortcut icon" href="assets/images/gitfit_favicon.png" />
+  <!-- bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <!-- local css link -->
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+  <!-- Google fonts link -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|PT+Sans|Ubuntu" rel="stylesheet">
+  <!-- viewport link -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
+
 <body>
 
-	<nav class="navbar navbar-default navbar-fixed-top">
-  		<div class="container-fluid">
-    		<div class="navbar-header">
-      		<a class="logoimage" href="index.html"><img src="assets/images/gitfit_logo.png"/></a>
-    		</div>
-
-    <!-- Collect the nav links, forms, and other content for toggling -->
+  <!-- nav bar -->
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a href="index.html"><img id="logo" src="assets/images/gitfit_logo.png" /></a>
+      </div>
+      <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav navbar-right">
           <li><a href="index.html">Body</a></li>
           <li><a href="health.html">Health</a></li>
           <li><a href="recipes.html">Recipes</a></li>
         </ul>
-      </div><!-- /.navbar-collapse -->
-    </div><!-- /.container-fluid -->
+      </div>
+      <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
   </nav>
-
+  
+  <!-- container for everything but nav bar -->
   <div class="container">
     <div class="row">
+      <!-- BMI drop down -->
       <div class="col-md-4">
+        <div class="container" id="collapseArea">
+          <!-- BMI button -->
+          <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#bmi" id="collapseButton">BMI Calculator</button>
+          <div id="bmi" class="collapse">
+            <!-- BMI form -->
+            <form action="">
+              <div class="form-group">
+                <input type="number" class="form-control" id="bmiWeight" placeholder="weight in kg" name="weight" required>
+              </div>
+              <div class="form-group">
+                <input type="number" class="form-control" id="bmiHeight" placeholder="height in cm" name="height" required>
+              </div>
+              <button type="submit" class="btn btn-default" id="bmiSubmit">Submit</button>
+              <div class="form-group">
+                <input type="text" class="form-control" id="bmiResult" placeholder="result" name="bmi" value="">
+              </div>
+            </form>
+          </div>
+        </div>
 
-        <br><br><h2>BMI Calculator</h2><br>
-        <form action="">
-          <div class="form-group">
-            <input type="weight" class="form-control" id="weight" placeholder="weight in lb" name="email">
+        <!-- Body Fat Calculator -->
+        <div class="container" id="collapseArea">
+          <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#bodyFat" id="collapseButton">Body Fat % Calculator</button>
+          <div id="bodyFat" class="collapse">
+            <form action="">
+              <!-- Weight -->
+              <div class="form-group">
+                <input type="number" class="form-control" id="bodyFatWeight" placeholder="weight in kg" name="weight" required>
+              </div>
+              <!-- Waist Circumference -->
+              <div class="form-group">
+                <input type="number" class="form-control" id="waistCir" placeholder="waist circumference in cm" name="waist" required>
+              </div>
+              <!-- Wrist Circumferece -->
+              <div class="form-group">
+                <input type="number" class="form-control" id="wristCir" placeholder="wrist circumference in cm" name="wrist" required>
+              </div>
+              <!-- Hip Circumference -->
+              <div class="form-group">
+                <input type="number" class="form-control" id="hipCir" placeholder="hip circumference in cm" name="hip" required>
+              </div>
+              <!-- Forearm Circumference -->
+              <div class="form-group">
+                <input type="number" class="form-control" id="forearm-cir" placeholder="forearm circumference in cm" name="forearm" required>
+              </div>
+              <!-- Submit Button -->
+              <button type="submit" class="btn btn-default" id="bodyFatSubmit">Submit</button>
+              <div class="form-group">
+                <input type="text" class="form-control" id="bodyFatResult" placeholder="result" name="bodyFat" value="">
+              </div>
+            </form>
           </div>
-          <div class="form-group">
-            <input type="height" class="form-control" id="height" placeholder="height in cm" name="height">
-          </div>
-          <button type="button" class="btn btn-default" id="BMIsubmit">Submit</button>
-          <div class="form-group"><br>
-            <input type="bmi" class="form-control" id="bmi" placeholder="Result" name="bmi">
-          </div>
-        </form>
-      </div>
+        </div>
 
-      <div class="col-md-4"><br><br>
-        <div class="container" id="collapseArea"><br>
-        <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo" id="collapseButton">BMI Calculator</button><br><br>
-        <div id="demo" class="collapse"><br>
-        <form action="">
-          <div class="form-group">
-            <input type="weight" class="form-control" id="weight" placeholder="weight in lb" name="email">
+        <div class="container" id="collapseArea">
+          <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#leanMass" id="collapseButton">Lean Body Mass Calculator</button>
+          <div id="leanMass" class="collapse">
+            <form action="">
+              <div class="form-group">
+                <input type="number" class="form-control" id="leanMassWeight" placeholder="weight in kg" name="weight" required>
+              </div>
+              <div class="form-group">
+                <input type="number" class="form-control" id="fatPercentage" placeholder="body fat %" name="height" required>
+              </div>
+              <button type="submit" class="btn btn-default" id="leanMassSubmit">Submit</button>
+              <div class="form-group">
+                <input type="text" class="form-control" id="leanMassResult" placeholder="result" name="leanMass" value="">
+              </div>
+            </form>
           </div>
-          <div class="form-group">
-            <input type="height" class="form-control" id="height" placeholder="height in cm" name="height">
-          </div>
-          <button type="button" class="btn btn-default" id="BMIsubmit">Submit</button>
-          <div class="form-group"><br>
-            <input type="bmi" class="form-control" id="bmi" placeholder="Result" name="bmi">
-          </div>
-        </form>
         </div>
       </div>
+
+      <div class="col-md-4">
+        <div class="container" id="collapseArea">
+          <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#maxHR" id="collapseButton">Max Heart Rate Calculator</button>
+          <div id="maxHR" class="collapse">
+            <form action="">
+              <div class="form-group">
+                <input type="number" class="form-control" id="maxHRage" placeholder="age" name="age" required>
+              </div>
+              <div class="form-group">
+                <input type="number" class="form-control" id="exerciseIntensity" placeholder="exercise intensity %" name="level" required>
+              </div>
+              <button type="submit" class="btn btn-default" id="maxHRSubmit">Submit</button>
+              <div class="form-group">
+                <input type="text" class="form-control" id="maxHRresult" placeholder="result" name="maxHR" value="">
+              </div>
+            </form>
+          </div>
+        </div>
+
+
+        <!-- Caloric Intake Calculator -->
+        <div class="container" id="collapseArea">
+          <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#caloricIntake" id="collapseButton">Daily Caloric Intake Calculator</button>
+          <div id="caloricIntake" class="collapse">
+            <form action="">
+              <!-- Gender -->
+              <div class="form-group">
+                <input type="radio" name="sex" id="sexFem" value="F" checked>
+                <label for="sexFem" class="inlineCaloric">Female</label>
+                <input type="radio" name="sex" id="sexMale" value="M">
+                <label for="sexMale" class="inlineCaloric">Male</label>
+              </div>
+              <!-- Age -->
+              <div class="form-group">
+                <input type="number" class="form-control" id="caloricAge" placeholder="age" name="age" required>
+              </div>
+              <!-- Weight -->
+              <div class="form-group">
+                <input type="number" class="form-control" id="caloricWeight" placeholder="weight in kg" name="weight" required>
+              </div>
+              <!-- Height -->
+              <div class="form-group">
+                <input type="number" class="form-control" id="caloricHeight" placeholder="height in cm" name="height" required>
+              </div>
+              <!-- Exercise Level -->
+              <div class="form-group">
+                <label for="sel1">Activity Level</label>
+                  <select class="form-control" id="caloricExercise">
+                      <option value=1.2>Little to no exercise</option>
+                      <option value=1.3 selected>3 times per week</option>
+                      <option value=1.4>4 times per week</option>
+                      <option value=1.5>5 times per week</option>
+                  </select>
+                <!-- <input type="number" class="form-control" id="caloricExercise" name="exercise"> -->
+              </div>
+              <!-- Submit Button -->
+              <button type="submit" class="btn btn-default" id="caloricIntakeSubmit">Submit</button>
+              <div class="form-group">
+                <input type="text" class="form-control" id="caloricIntakeResult" placeholder="result" name="caloricIntake" value="">
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <!-- Protein RDA Calculator -->
+        <div class="container" id="collapseArea">
+          <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#protein" id="collapseButton">Protein RDA Calculator</button>
+          <div id="protein" class="collapse">
+            <form>
+              <!-- Weight -->
+              <div class="form-group">
+                <input type="number" class="form-control" id="proteinWeight" placeholder="weight in kg" name="weight" required>
+              </div>
+              <!-- Submit Button -->
+              <button type="submit" class="btn btn-default" id="proteinSubmit">Submit</button>
+              <div class="form-group">
+                <input type="text" class="form-control" id="proteinResult" placeholder="result" name="protein" value="">
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>  
+
+      <div class="col-md-4">
+        <!-- Imperial to Metric Conversion Chart -->
+        <div class="container" id="collapseArea">
+          <!-- Conversion button -->
+          <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#conversion" id="collapseButton">Convert Units</button>
+          <div id="conversion" class="collapse">
+            <!-- Conversion form -->
+            <form action="">
+              <div class="form-group">
+                <h4>Weight</h4>
+                <input type="radio" name="weight" id="weightKg" value="Kg" checked="checked">
+                <label for="weightKg" class="inlineWeight">Lbs to kg</label>&nbsp;
+                <input type="radio" name="weight" id="weightLbs" value="Lbs">
+                <label for="weightLbs" class="inlineWeight">Kg to lbs</label>
+                <input type="number" class="form-control" id="conversionWeight" placeholder="weight" name="weight" required>
+              </div>
+              <button type="submit" class="btn btn-default" id="convWeightSubmit">Convert</button>
+              <div class="form-group">
+                <input type="text" class="form-control" id="convWeightResult" placeholder="result" name="conversion" value="">
+              </div>
+              </form>
+              <form action="">
+              <div class="form-group">
+                <h4>Height</h4>
+                <input type="number" class="form-control" id="conversionHeightFt" placeholder="feet" name="height feet" required>
+              </div>
+              <div class="form-group">
+                <input type="number" class="form-control" id="conversionHeightIn" placeholder="inches" name="height inches" required>
+              </div>
+              <button type="submit" class="btn btn-default" id="convHeightSubmit">Convert to cm</button>
+              <div class="form-group">
+                <input type="text" class="form-control" id="convHeightResult" placeholder="result" name="conversion" value="">
+              </div>
+            </form>
+          </div>
+        </div>
+  
+        <!-- div to hold all results as user gets results from calculator -->
+        <!-- no form, dynamically generated divs:
+        <div class="container" id="result-info">
+          <h3>Results Data</h3>
+          <div id="show-results"></div>
+        </div> -->
+        <div class="container" id="result-info">
+          <h3>Overall Results</h3>
+          <!-- <div id="show-results"></div> -->
+          <input type="text" class="form-control" id="bmi-results" placeholder="" name="bmi" value="">
+          <input type="text" class="form-control" id="body-fat-results" placeholder="" name="body-fat" value="">
+          <input type="text" class="form-control" id="lean-mass-results" placeholder="" name="lean-mass" value="">
+          <input type="text" class="form-control" id="heart-rate-results" placeholder="" name="heart-rate" value="">
+          <input type="text" class="form-control" id="cal-intake-results" placeholder="" name="cal-intake" value="">
+          <input type="text" class="form-control" id="protein-results" placeholder="" name="protein" value="">
+        </div>
+      </div>
+
+      </div>
     </div>
-    
-  </div><br>
-</div>
+  </div>
+  
 
-<br><br><footer></footer><br>
+  <br><footer>&copy;2017 Ebru Yucesar, Anuradha Ramachandra, Rachel Vaughan, Raquel Rodriguez, Jamie Gelo</footer>
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <!-- bootstrap -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <!-- firebase link -->
+  <script src="https://www.gstatic.com/firebasejs/4.1.1/firebase.js"></script>
+  <!-- local javascript file -->
+  <script src="assets/javascript/index.js"></script>
+  <script src="assets/javascript/health.js"></script>
+  <script src="assets/javascript/recipes.js"></script>
+  <script src="assets/javascript/exercise.js"></script>
 
-
-    <script src="assets/javascript/app.js"></script>
 </body>
+
 </html>

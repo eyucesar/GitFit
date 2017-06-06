@@ -1,54 +1,57 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8">
-	<title>GitFit</title>
-	<link rel="shortcut icon" href="assets/images/gitfit_favicon.png"/>
-  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-  	<script src="https://code.jquery.com/jquery.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GitFit</title>
+    <link rel="shortcut icon" href="assets/images/gitfit_favicon.png" />
     <link href="https://fonts.googleapis.com/css?family=Open+Sans|PT+Sans|Ubuntu" rel="stylesheet">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 </head>
+
 <body>
-
-	<nav class="navbar navbar-default navbar-fixed-top">
-  		<div class="container-fluid">
-    		<div class="navbar-header">
-      		<a class="logoimage" href="index.html"><img src="assets/images/gitfit_logo.png"/></a>
-    		</div>
-
-    <!-- Collect the nav links, forms, and other content for toggling -->
-      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <ul class="nav navbar-nav navbar-right">
-          <li><a href="index.html">Body</a></li>
-          <li><a href="health.html">Health</a></li>
-          <li><a href="recipes.html">Recipes</a></li>
-        </ul>
-      </div><!-- /.navbar-collapse -->
-    </div><!-- /.container-fluid -->
-  </nav>
-
-<div class="container">
-    <div class="row">
-      <div class="col-md-12"><br>
-        <h2>Search for healthy recipes</h2><br>
-        <div class="input-group">
-            <input type="text" class="form-control" placeholder="asparagus, low-carb, chicken...">
-            <span class="input-group-btn">
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a href="index.html"><img id="logo" src="assets/images/gitfit_logo.png"/></a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="index.html">Body</a></li>
+                    <li><a href="health.html">Health</a></li>
+                    <li><a href="recipes.html">Recipes</a></li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h2>Search for healthy recipes</h2>
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Enter Ingredient">
+                    <span class="input-group-btn">
             <button class="btn btn-default" type="button" id="recipeSearch">Search</button>
             </span>
-        </div><br><br>
-      </div>
+                </div>
+            </div>
+        </div>
+        <div class="row" id="recipesRow"></div>
     </div>
-
-      <div class="row" id="recipesRow"></div>
-</div>
-
-<br><br><footer></footer><br>
-
-    <script src="assets/javascript/app.js"></script>
+  
+  <br><footer>&copy;2017 Ebru Yucesar, Anuradha Ramachandra, Rachel Vaughan, Raquel Rodriguez, Jamie Gelo</footer><br>
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="assets/javascript/index.js"></script>
+    <script src="assets/javascript/health.js"></script>
+    <script src="assets/javascript/recipes.js"></script>
+    <script src="assets/javascript/exercise.js"></script>
 </body>
+
 </html>

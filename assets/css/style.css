@@ -1,3 +1,5 @@
+/***** general styles appearing on more than one page *****/
+
 * {
 	border-radius: 10px;
 	box-sizing: border-box;
@@ -15,6 +17,15 @@ body {
 	height: 110px;
 }
 
+.container {
+	background-color: #cfeda1;
+	padding-bottom: 10px;
+	width: 94%;
+	height: 100%;
+	border: 1px solid #b6d684;
+}
+
+/*navbar in header*/
 .navbar-default .navbar-nav>li>a {
 	font-family: "Open Sans", sans-serif, Arial;
 	font-size: 24px;
@@ -23,7 +34,8 @@ body {
 	padding-top: 40px;
 }
 
-img {
+/*gitfit logo in header*/
+#logo {
 	box-sizing: border-box;
 	padding: 18px;
 }
@@ -35,107 +47,7 @@ h1 {
 	font-weight: bolder;
 }
 
-h1, h5 {
-	font-size: 18px;
-}
-
-h5 {
-	color: black;
-	font-weight: bolder;
-	margin-left: 50px;
-}
-
-#anatomy {
-	display: block;
-    margin: auto;
-    padding: 0;
-    border: 1px solid #c9c7c7;
-    width: 100%;
-    border-radius: 10px;
-    margin: 0 0 10px 10px;
-}
-
-.input-group-btn:last-child>.btn, .input-group-btn:last-child>.btn-group {
-	font-size: 20px;
-	background-color: #00B0EF;
-	color: white;
-	border: 1px solid #00B0EF;
-}
-
-.input-group .form-control:first-child {
-	height: 42px;
-	width: 300px;
-}
-
-input.form-control {
-	border: 1px solid #00B0EF;
-}
-
-.container {
-	background-color: #cfeda1;
-	width: 94%;
-	height: 100%;
-	border: 1px solid #b6d684;
-}
-
-footer {
-	text-align: center;
-	font-size: 12px;
-	color: black;
-}
-
-#BMIsubmit {
-	background-color: #00B0EF;
-	color: white;
-	border: none;
-}
-
-input[type=radio] {
-	margin-left: 10px;
-}
-
-#toggleBody {
-    text-align: center;
-}
-
-.btn-female {
-	background-color: #00B0EF;
-	border: 1px solid #00B0EF;
-	color: white;
-	font-size: 16px;
-}
-
-.btn-success {
-	font-size: 16px;
-}
-
-.btn-danger.active, .btn-female:active, .open>.dropdown-toggle.btn-danger, .btn-female:hover {
-	background-color: #018bbc;
-	border: 1px solid #018bbc;
-	color: white;
-}
-
-#search:hover, #search:focus {
-	background-color: #018bbc;
-	border: 1px solid #018bbc;
-	outline: 0;
-}
-
-.input-group-btn {
-	display: inline block;
-	width: 100%;
-}
-
-.input-group {
-	width: 100%;
-}
-
-.input-group > .form-control {
-      width: 100%;
-}
-
 h3 {
-	padding-left: 20px;
 	color: #018bbc;
 	font-weight: bolder;
 	font-size: 18px;
@@ -152,23 +64,159 @@ a {
 	padding-left: 20px;
 }
 
-#collapseArea {
-	background-color: #fafff2;
+h1, h5 {
+	font-size: 18px;
 }
 
-#collapseButton {
-	font-size: 16px;
+h5 {
+	color: black;
+	font-weight: bolder;
+	margin-left: 50px;
+}
+
+/*buttons on main and recipes pages*/
+.input-group-btn:last-child>.btn, .input-group-btn:last-child>.btn-group {
+	font-size: 20px;
 	background-color: #00B0EF;
-	display: block;
-	margin: auto 0;
+	color: white;
+	border: 1px solid #00B0EF;
 }
 
+/*buttons on main and recipes pages*/
+.input-group-btn {
+	display: inline block;
+	width: 100%;
+}
+
+/*search box in main and recipes pages*/
+.input-group .form-control:first-child {
+	height: 42px;
+	width: 300px;
+}
+
+/*form text box borders*/
+input.form-control {
+	border: 1px solid #00B0EF;
+	margin-bottom: 5px;
+}
+
+footer {
+	text-align: center;
+	font-size: 12px;
+	color: black;
+}
+
+/***** main index page styles *****/
+
+#anatomy {
+	display: block;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #c9c7c7;
+    border-radius: 10px;
+    margin: 10px 20px 10px 20px;
+}
+
+area {
+	outline: 16px solid #4cae4c;
+}
+
+#toggleBody {
+    text-align: center;
+}
+
+.btn-female {
+	background-color: #00B0EF;
+	border: 1px solid #00B0EF;
+	color: white;
+	font-size: 16px;
+}
+
+#muscleMenu {
+	width: 300px;
+	height: 46px;
+	background-color: #5cb85c;
+	border: 1px solid #4cae4c;
+	color: white;
+	font-size: 16px;
+	font-weight: bolder;
+}
+
+#muscleMenu:hover, #muscleMenu:focus {
+	background-color: #388938;
+}
+
+.muscleGroups {
+	width: 300px;
+	height: 30px;
+}
+
+/*results after "go" button clicked*/
 #glute {
 	margin: 0 10px 10px 0;
 	background-color: #00B0EF;
 	display: inline;
 }
 
-@media screen and (max-width: 640px) {
+/***** health/calculators page styles *****/
 
+.btn-default {
+	background-color: #00B0EF;
+	color: white;
+	border: none;
+	margin-bottom: 15px;
 }
+
+#collapseArea {
+	background-color: #fafff2;
+	margin-top: 20px;
+}
+
+#collapseButton {
+	font-size: 16px;
+	background-color: #00B0EF;
+	display: block;
+	margin: 0 auto;
+	margin-top: 20px;
+	margin-bottom: 10px;
+}
+
+.descHeader {
+	text-align: center;
+	background-color: #4a8eaf;
+	color:white;
+	margin: 0;
+	height:30px;
+	line-height:30px;
+}
+
+.collapse-div {
+	background-color: rgba(234, 231, 231, 0.82);
+	border: 2px solid; 
+	padding: 20px; 
+	box-shadow: 10px;
+	box-shadow: 5px 5px #a59d9d;
+	margin-bottom: 10px;
+}
+
+#result-info {
+	background-color: #fafff2;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	text-align: center;
+}
+
+@media (max-width: 1024px) {
+
+  /*Need something here*/ #_____{
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 640px) {
+	/*currently the nav items are disappearing at this width, fix that*/
+	#anatomy {
+	    margin: 0;
+	}
+}
+
