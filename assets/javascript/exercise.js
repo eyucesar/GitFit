@@ -150,7 +150,7 @@ $(document).ready(function () {
         displayExercise(muscle);
       }
     }
-  };
+  }
 
   // Add our commands to annyang
   annyang.addCommands(commands);
