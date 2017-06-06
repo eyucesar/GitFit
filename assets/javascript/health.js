@@ -6,19 +6,19 @@ $("#heart-rate-results").hide();
 $("#cal-intake-results").hide();
 $("#protein-results").hide();
 
-// Initialize Firebase
-var config = {
-  apiKey: "AIzaSyB_JQagylAT6I5kjHi0lx34v_PTvXMG8Dw",
-  authDomain: "gitfit-58bb2.firebaseapp.com",
-  databaseURL: "https://gitfit-58bb2.firebaseio.com",
-  projectId: "gitfit-58bb2",
-  storageBucket: "gitfit-58bb2.appspot.com",
-  messagingSenderId: "536732614585"
-};
-firebase.initializeApp(config);
+// // Initialize Firebase
+// var config = {
+//   apiKey: "AIzaSyB_JQagylAT6I5kjHi0lx34v_PTvXMG8Dw",
+//   authDomain: "gitfit-58bb2.firebaseapp.com",
+//   databaseURL: "https://gitfit-58bb2.firebaseio.com",
+//   projectId: "gitfit-58bb2",
+//   storageBucket: "gitfit-58bb2.appspot.com",
+//   messagingSenderId: "536732614585"
+// };
+// firebase.initializeApp(config);
 
-//set variable to refer to database
-var database = firebase.database();
+// //set variable to refer to database
+// var database = firebase.database();
 
 $(document).ready(function () {
 
