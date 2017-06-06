@@ -141,7 +141,7 @@ $(document).ready(function () {
   // Let's define our first command. First the text we expect, and then the function it should call
   var commands = {
     'Hamstring': function() {
-      muscle = commands[0];
+      muscle = Hamstring;
       displayExercise(muscle);
     }
   };
