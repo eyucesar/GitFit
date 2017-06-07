@@ -159,7 +159,7 @@ $(document).ready(function () {
   function fromVoice() {
     console.log("voice detected");
     for (var i = 0; i < muscleName.length; i++) {
-      if (commands.biceps === muscleName[i]) {
+      if (commands.name === muscleName[i]) {
         //testing
         console.log("voice loop is running");
         muscle = biceps;
