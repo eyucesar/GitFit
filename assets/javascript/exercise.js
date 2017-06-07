@@ -159,18 +159,6 @@ $(document).ready(function () {
   
 
   if (annyang) {
-
-    function fromVoice() {
-    console.log("voice detected");
-    for (var i = 0; i < muscleName.length; i++) {
-      if (commands.name === muscleName[i]) {
-        //testing
-        console.log("voice loop is running");
-        muscle = biceps;
-        displayExercise(muscle);
-      }
-    }
-  }
   
   // Let's define a command.
 
@@ -188,6 +176,19 @@ $(document).ready(function () {
     'lats': function() {fromVoice();},
     'obliques': function() {fromVoice();}
     }
+
+    function fromVoice() {
+    console.log("voice detected");
+    for (var i = 0; i < muscleName.length; i++) {
+      if (commands.name === muscleName[i]) {
+        //testing
+        console.log("voice loop is running");
+        muscle = biceps;
+        displayExercise(muscle);
+      }
+    }
+  }
+  
   };
 
   // Add our commands to annyang
