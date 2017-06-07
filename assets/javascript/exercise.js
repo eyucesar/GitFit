@@ -182,7 +182,7 @@ $(document).ready(function () {
     function fromVoice() {
     console.log("voice detected");
     for (var i = 0; i < muscleName.length; i++) {
-      for (var i = 0; j < keyNames.length; j++) {
+      for (var j = 0; j < keyNames.length; j++) {
         if (keyNames[j] === muscleName[i]) {
           //testing
           console.log("voice loop is running");
