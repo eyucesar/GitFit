@@ -137,10 +137,35 @@ $(document).ready(function () {
       }
   });
 
+  
+      for (var i = 0; i < muscleName.length; i++) {
+        if (this.className === muscleName[i]) {
+        //testing
+        console.log("loop is running");
+        muscle = this.className;
+        displayExercise(muscle);
+        }
+      }
+
   if (annyang) {
+  
   // Let's define a command.
+
   var commands = {
-    'hello': function() { alert('Hello world!'); }
+    'biceps': function() { alert('Hello world!'); }
+    'shoulder': function() { alert('Hello world!'); }
+    'ribs': function() { alert('Hello world!'); }
+    'chest': function() { alert('Hello world!'); }
+    'triceps': function() { alert('Hello world!'); }
+    'abs': function() { alert('Hello world!'); }
+    'calves': function() { alert('Hello world!'); }
+    'glutes': function() { alert('Hello world!'); }
+    'quads': function() { alert('Hello world!'); }
+    'hamstring': function() { alert('Hello world!'); }
+    'lats': function() { alert('Hello world!'); }
+    'obliques': function() { alert('Hello world!'); }
+    }
+  
   };
 
   // Add our commands to annyang
@@ -148,7 +173,7 @@ $(document).ready(function () {
 
   // Start listening.
   annyang.start();
-}
+
 
 });
 
