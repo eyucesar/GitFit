@@ -22,7 +22,7 @@ function getInput() {
 }
 
 function voiceInput() {
-    inputVal = $("#input-field").val().trim();
+    inputVal = tag;
     queryURL = baseURL + inputVal + "&limit=" + resultCount + "&app_ID" + app_ID + "&app_key=" + appKey;
 }
 
@@ -134,7 +134,6 @@ function displayRecipes() {
 };
 
 function voiceRecipes() {
-    event.preventDefault();
     voiceInput();
     $("#recipesRow").empty();
     ajaxCall();
