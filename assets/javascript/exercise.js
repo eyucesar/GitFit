@@ -151,7 +151,7 @@ $(document).ready(function () {
 
   // Add instructional texts
   SpeechKITT.setInstructionsText('What muscle group are you looking for?');
-  SpeechKITT.setSampleCommands(['Quad exercises', 'Chest exercises']);
+  SpeechKITT.setSampleCommands(['Say it', '']);
 
   // Render KITT's interface
   SpeechKITT.vroom();
