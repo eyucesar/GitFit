@@ -163,32 +163,15 @@ $(document).ready(function () {
   // Let's define a command.
 
   var commands = {
-    'Biceps': function() {fromVoice();},
-    'Shoulder': function() {fromVoice();},
-    'Ribs': function() {fromVoice();},
-    'Chest': function() {fromVoice();},
-    'Triceps': function() {fromVoice();},
-    'Abs': function() {fromVoice();},
-    'Calves': function() {fromVoice();},
-    'Glutes': function() {fromVoice();},
-    'Quads': function() {fromVoice();},
-    'Hamstring': function() {fromVoice();},
-    'Lats': function() {fromVoice();},
-    'Obliques': function() {fromVoice();}
-    }
+    'show me *tag': fromVoice,
+    
+  };
 
     var keyNames = Object.keys(commands);
 
     function fromVoice() {
-    console.log("voice detected");
-      for (var j = 0; j < keyNames.length; j++) {
-        if ($.inArray(keyNames[j], muscleName) != -1) {
-          //testing
-          console.log("voice loop is running");
-          // muscle = biceps;
-          // displayExercise(muscle);
-        }
-      }
+      console.log(tag);
+      
     }
   
   };
