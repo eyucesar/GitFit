@@ -172,7 +172,7 @@ $(document).ready(function () {
     // var keynames = Object.keys(commands);
 
     var fromVoice = function(tag) {
-      console.log("yay");
+      console.log(tag);
       
     }
 
