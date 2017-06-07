@@ -169,10 +169,13 @@ $(document).ready(function () {
     
   };
 
+
+
     // var keynames = Object.keys(commands);
 
     var fromVoice = function(tag) {
-      alert(tag);
+      var url = 'http://api.flickr.com'+tag;
+      console.log(url);
       
     }
 
