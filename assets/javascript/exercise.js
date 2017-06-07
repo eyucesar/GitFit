@@ -170,9 +170,9 @@ $(document).ready(function () {
     // var keyNames = Object.keys(commands);
 
     var fromVoice = function(tag) {
-      console.log(tag);
+      console.log("yay");
       
-    };
+    }
   
   };
 
