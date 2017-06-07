@@ -1,3 +1,5 @@
+$(document).ready(function() {
+
 var baseURL = "https://api.edamam.com/search?q="
 var appKey = "4cb43262ed46d6be10b05df6cb89da13"
 var app_ID = "875f4d15"
@@ -44,7 +46,7 @@ function showDivs(n) {
 
 
 //On click event to get recipes and list them to the recipesRow div
-$(document).ready(function() {
+
     event.preventDefault();
 
     $("button").on("click", displayRecipes);
@@ -124,7 +126,7 @@ $(document).ready(function() {
     resetSearchResults();
     };
 
-});
+
 
 //voice detection code starts here
  if (annyang) {
@@ -146,3 +148,4 @@ $(document).ready(function() {
   annyang.start();
 
 }
+});
