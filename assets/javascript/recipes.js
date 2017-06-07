@@ -1,5 +1,3 @@
-$(document).ready(function () {
-
 var baseURL = "https://api.edamam.com/search?q="
 var appKey = "4cb43262ed46d6be10b05df6cb89da13"
 var app_ID = "875f4d15"
@@ -122,6 +120,4 @@ $(document).ready(function() {
 
         resetSearchResults();
     })
-});
-
 });
