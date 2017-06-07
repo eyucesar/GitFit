@@ -21,6 +21,11 @@ function getInput() {
     queryURL = baseURL + inputVal + "&limit=" + resultCount + "&app_ID" + app_ID + "&app_key=" + appKey;
 }
 
+function voiceInput() {
+    inputVal = $("#input-field").val().trim();
+    queryURL = baseURL + inputVal + "&limit=" + resultCount + "&app_ID" + app_ID + "&app_key=" + appKey;
+}
+
 //function to allow user to press enter instead of Search
 function searchKeypress(event) {
     if (event.keyCode === 13) { //checks whether the pressed key is "Enter"
@@ -51,13 +56,8 @@ function showDivs(n) {
 
     $("button").on("click", displayRecipes);
 
-
-    function displayRecipes() {
-    event.preventDefault();
-    getInput();
-    $("#recipesRow").empty();
-
-    $.ajax({
+    function ajaxCall () {
+        $.ajax({
         url: queryURL,
         method: "GET"
             // Store all of the retrieved data inside of an object called "response"
@@ -122,7 +122,22 @@ function showDivs(n) {
         }
 
     });
+    }
 
+
+    function displayRecipes() {
+    event.preventDefault();
+    getInput();
+    $("#recipesRow").empty();
+    ajaxCall();
+    resetSearchResults();
+};
+
+function voiceRecipes() {
+    event.preventDefault();
+    voiceInput();
+    $("#recipesRow").empty();
+    ajaxCall();
     resetSearchResults();
 };
 
