@@ -158,6 +158,14 @@ $(document).ready(function () {
 
   function fromVoice() {
     console.log("voice detected");
+    for (var i = 0; i < muscleName.length; i++) {
+      if (commands.biceps === muscleName[i]) {
+        //testing
+        console.log("voice loop is running");
+        muscle = biceps;
+        displayExercise(muscle);
+      }
+    }
   }
 
   if (annyang) {
@@ -166,17 +174,17 @@ $(document).ready(function () {
 
   var commands = {
     'biceps': function() {fromVoice();},
-    'shoulder': function() { alert('Hello world!'); },
-    'ribs': function() { alert('Hello world!'); },
-    'chest': function() { alert('Hello world!'); },
-    'triceps': function() { alert('Hello world!'); },
-    'abs': function() { alert('Hello world!'); },
-    'calves': function() { alert('Hello world!'); },
-    'glutes': function() { alert('Hello world!'); },
-    'quads': function() { alert('Hello world!'); },
-    'hamstring': function() { alert('Hello world!'); },
-    'lats': function() { alert('Hello world!'); },
-    'obliques': function() { alert('Hello world!'); }
+    'shoulder': function() {fromVoice();},
+    'ribs': function() {fromVoice();},
+    'chest': function() {fromVoice();},
+    'triceps': function() {fromVoice();},
+    'abs': function() {fromVoice();},
+    'calves': function() {fromVoice();},
+    'glutes': function() {fromVoice();},
+    'quads': function() {fromVoice();},
+    'hamstring': function() {fromVoice();},
+    'lats': function() {fromVoice();},
+    'obliques': function() {fromVoice();}
     }
   };
 
