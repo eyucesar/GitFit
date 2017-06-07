@@ -134,6 +134,7 @@ function showDivs(n) {
   // defining commands
   var commands = {
     'recipes with *tag': function(tag) {
+    console.log("yay");
     inputVal = tag;
     displayRecipes();
 } 
