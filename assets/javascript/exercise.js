@@ -149,6 +149,10 @@ $(document).ready(function () {
   // Define a stylesheet for KITT to use
   SpeechKITT.setStylesheet('//cdnjs.cloudflare.com/ajax/libs/SpeechKITT/0.3.0/themes/flat.css');
 
+  // Add instructional texts
+  SpeechKITT.setInstructionsText('Some commands to try…');
+  SpeechKITT.setSampleCommands(['Show directions', 'Call restaurant']);
+
   // Render KITT's interface
   SpeechKITT.vroom();
 }
