@@ -149,10 +149,6 @@ $(document).ready(function () {
   // Define a stylesheet for KITT to use
   SpeechKITT.setStylesheet('//cdnjs.cloudflare.com/ajax/libs/SpeechKITT/0.3.0/themes/flat.css');
 
-  // Add instructional texts
-  SpeechKITT.setInstructionsText('What muscle group are you looking for?');
-  SpeechKITT.setSampleCommands('Say chest, quads, abs etc.');
-
   // Render KITT's interface
   SpeechKITT.vroom();
 }
