@@ -183,8 +183,8 @@ $(document).ready(function () {
       if (commands.name === muscleName[i]) {
         //testing
         console.log("voice loop is running");
-        muscle = biceps;
-        displayExercise(muscle);
+        // muscle = biceps;
+        // displayExercise(muscle);
       }
     }
   }
