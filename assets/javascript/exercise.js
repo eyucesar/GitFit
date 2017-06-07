@@ -181,9 +181,8 @@ $(document).ready(function () {
 
     function fromVoice() {
     console.log("voice detected");
-    for (var i = 0; i < muscleName.length; i++) {
       for (var j = 0; j < keyNames.length; j++) {
-        if (keyNames[j] === muscleName[i]) {
+        if ($.inArray(keyNames[j], muscleName) != -1) {
           //testing
           console.log("voice loop is running");
           // muscle = biceps;
@@ -193,7 +192,7 @@ $(document).ready(function () {
     }
   
   };
-};
+
 
   // Add our commands to annyang
   annyang.addCommands(commands);
