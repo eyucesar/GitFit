@@ -206,6 +206,10 @@ area {
 	text-align: center;
 }
 
+#skitt-listening-box {
+      display: inline-flex!important;
+}
+
 @media (max-width: 1024px) {
 
   /*Need something here*/ #_____{

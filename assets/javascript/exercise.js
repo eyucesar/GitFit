@@ -138,9 +138,24 @@ $(document).ready(function () {
   });
 
   if (annyang) {
+
+  // Set annyang in debug mode
+  annyang.debug();
+
+  // Set annyang language 
+  annyang.setLanguage('en-GB');
+
   // Add our commands to annyang
   annyang.addCommands({
-    'hello': function() { alert('Hello world!'); }
+    'hello': function() {
+      alert('Hello world!');
+    },
+    'show directions': function() {
+      alert('Show directions!');
+    },
+    'call restaurant': function() {
+      alert('Call restaurant!');
+    }
   });
 
   // Tell KITT to use annyang
@@ -149,6 +164,12 @@ $(document).ready(function () {
   // Define a stylesheet for KITT to use
   SpeechKITT.setStylesheet('//cdnjs.cloudflare.com/ajax/libs/SpeechKITT/0.3.0/themes/flat.css');
 
+  // Add instructional texts
+  SpeechKITT.setInstructionsText('What muscle group are you looking for?');
+  SpeechKITT.setSampleCommands('Say chest, quads, abs etc.');
+
+  // If user clicks start button, remember his choice for 1 minute
+  SpeechKITT.rememberStatus(1);
   // Render KITT's interface
   SpeechKITT.vroom();
 }
