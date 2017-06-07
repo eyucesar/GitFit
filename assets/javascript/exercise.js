@@ -183,16 +183,17 @@ $(document).ready(function () {
     console.log("voice detected");
     for (var i = 0; i < muscleName.length; i++) {
       for (var name in commands) {
-      if (name === muscleName[i]) {
-        //testing
-        console.log("voice loop is running");
-        // muscle = biceps;
-        // displayExercise(muscle);
+        if (name === muscleName[i]) {
+          //testing
+          console.log("voice loop is running");
+          // muscle = biceps;
+          // displayExercise(muscle);
+        }
       }
     }
-  }
   
   };
+};
 
   // Add our commands to annyang
   annyang.addCommands(commands);
