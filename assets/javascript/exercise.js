@@ -163,10 +163,8 @@ $(document).ready(function () {
   // Let's define a command.
 
   var commands = {
-    'show me *tag': function () {
-      fromVoice();
-    }
-    
+    'show me *tag': fromVoice
+
   };
 
 
