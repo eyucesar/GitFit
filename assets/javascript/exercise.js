@@ -164,6 +164,7 @@ $(document).ready(function () {
 
   var commands = {
     'show me *tag': function(tag) {
+      tag = tag.charAt(0).toUpperCase() + tag.slice(1);
       var url = 'http://api.flickr.com'+tag;
       console.log(url);
     }
