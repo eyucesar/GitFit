@@ -158,7 +158,7 @@ $(document).ready(function () {
 
   
 
- 
+ if (annyang) {
   
   // Let's define a command.
 
@@ -176,7 +176,7 @@ $(document).ready(function () {
       
     }
 
-    
+  }
 
 });
 
