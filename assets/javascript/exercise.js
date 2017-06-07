@@ -137,31 +137,10 @@ $(document).ready(function () {
       }
   });
 
-
-  // function imageMuscles() {
-  //   event.preventDefault();
-  //   //testing
-  //   console.log("muscleclicked");
-  //   for (var i = 0; i < muscleName.length; i++) {
-  //     if (this.className === muscleName[i]) {
-  //       //testing
-  //       console.log("loop is running");
-  //       muscle = this.className;
-  //       displayExercise(muscle);
-  //     }
-  //   }
-  // };
-
-  // // When muscle groups on the body are clicked, imageMuscles function will fire
-  // $("area").on("click", imageMuscles);
-
-
-  
-
+  //voice detection code starts here
  if (annyang) {
   
-  // Let's define a command.
-
+  // defining commands
   var commands = {
     'exercises for *tag': function(tag) {
       tag = tag.charAt(0).toUpperCase() + tag.slice(1);

@@ -33,7 +33,7 @@
     </nav>
     <div class="container">
         <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-6">
                 <h2>Search for healthy recipes</h2>
                 <div class="input-group">
                     <input type="text" id="input-field" class="form-control" placeholder="Enter Ingredient">
@@ -41,6 +41,10 @@
             <button class="btn btn-default" type="button" id="recipeSearchButton">Search</button>
             </span>
                 </div>
+            </div>
+            <div class="col-md-5">
+                <br><div id="mic"><i class="fa fa-microphone fa-lg" aria-hidden="true"></i>&nbsp;&nbsp;You can search recipes with voice commands as well! <br>For example, say: Recipes with chicken,recipes with carrots...</div>
+                <div id="errorMessage"></div>
             </div>
         </div>
         <div class="row" id="recipesRow"></div>
