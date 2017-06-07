@@ -149,6 +149,7 @@ if (annyang) {
     var commands = {
         'recipes with *tag': function(tag) {
         console.log(tag);
+        voiceRecipes();
         } 
     };
 
