@@ -167,8 +167,10 @@ $(document).ready(function () {
       tag = tag.charAt(0).toUpperCase() + tag.slice(1);
       if ($.inArray(tag, muscleName) != -1) {
         muscle = tag;
+        $("#errorMessage").empty();
         displayExercise(muscle);
       } else {
+        $("#errorMessage").empty();
         $("#errorMessage").append("<i class='fa fa-exclamation fa-lg' aria-hidden=true'></i>&nbsp;&nbsp;Muscle group is not detected. Please try again.");
         $("#exerciseSpace").empty();
       }
