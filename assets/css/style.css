@@ -3,6 +3,7 @@
 * {
 	border-radius: 10px;
 	box-sizing: border-box;
+	font-family: "Open Sans", sans-serif, Arial;
 }
 
 body {
@@ -66,6 +67,7 @@ a {
 
 h1, h5 {
 	font-size: 18px;
+	font-family: "Open Sans", sans-serif, Arial;
 }
 
 h5 {
@@ -208,6 +210,9 @@ area {
 
 #skitt-ui {
 	display: inline-flex!important;
+	position: absolute;
+	bottom: 100px;
+	left: ;
 }
 
 @media (max-width: 1024px) {
