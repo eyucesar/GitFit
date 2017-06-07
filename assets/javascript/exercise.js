@@ -163,7 +163,7 @@ $(document).ready(function () {
     'quads': function() { alert('Hello world!'); }
     'hamstring': function() { alert('Hello world!'); }
     'lats': function() { alert('Hello world!'); }
-    'obliques': function() { alert('Hello world!'); }
+    'obliques': function() { alert('Hello world!');
     }
   
   };
