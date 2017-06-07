@@ -163,18 +163,18 @@ $(document).ready(function () {
   // Let's define a command.
 
   var commands = {
-    'biceps': function() {fromVoice();},
-    'shoulder': function() {fromVoice();},
-    'ribs': function() {fromVoice();},
-    'chest': function() {fromVoice();},
-    'triceps': function() {fromVoice();},
-    'abs': function() {fromVoice();},
-    'calves': function() {fromVoice();},
-    'glutes': function() {fromVoice();},
-    'quads': function() {fromVoice();},
-    'hamstring': function() {fromVoice();},
-    'lats': function() {fromVoice();},
-    'obliques': function() {fromVoice();}
+    'Biceps': function() {fromVoice();},
+    'Shoulder': function() {fromVoice();},
+    'Ribs': function() {fromVoice();},
+    'Chest': function() {fromVoice();},
+    'Triceps': function() {fromVoice();},
+    'Abs': function() {fromVoice();},
+    'Calves': function() {fromVoice();},
+    'Glutes': function() {fromVoice();},
+    'Quads': function() {fromVoice();},
+    'Hamstring': function() {fromVoice();},
+    'Lats': function() {fromVoice();},
+    'Obliques': function() {fromVoice();}
     }
 
     var keyNames = Object.keys(commands);
