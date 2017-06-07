@@ -163,17 +163,17 @@ $(document).ready(function () {
   // Let's define a command.
 
   var commands = {
-    'show me *tag': fromVoice
+    'show me *tag': function(tag) {
+      var url = 'http://api.flickr.com'+tag;
+      console.log(url);
+    }
 
   };
 
 
 
-    // var keynames = Object.keys(commands);
-
-    var fromVoice = function(tag) {
-      var url = 'http://api.flickr.com'+tag;
-      console.log(url);
+    
+      
       
     }
 
