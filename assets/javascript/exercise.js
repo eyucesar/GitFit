@@ -167,12 +167,14 @@ $(document).ready(function () {
     
   };
 
-    // var keyNames = Object.keys(commands);
+    // var keynames = Object.keys(commands);
 
     var fromVoice = function(tag) {
-      console.log("yay");
+      console.log(tag);
       
     }
+
+    fromVoice();
 
 });
 
