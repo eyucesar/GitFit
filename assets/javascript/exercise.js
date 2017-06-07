@@ -137,22 +137,35 @@ $(document).ready(function () {
       }
   });
 
-  
-      for (var i = 0; i < muscleName.length; i++) {
-        if (this.className === muscleName[i]) {
-        //testing
-        console.log("loop is running");
-        muscle = this.className;
-        displayExercise(muscle);
-        }
-      }
+
+  // function imageMuscles() {
+  //   event.preventDefault();
+  //   //testing
+  //   console.log("muscleclicked");
+  //   for (var i = 0; i < muscleName.length; i++) {
+  //     if (this.className === muscleName[i]) {
+  //       //testing
+  //       console.log("loop is running");
+  //       muscle = this.className;
+  //       displayExercise(muscle);
+  //     }
+  //   }
+  // };
+
+  // // When muscle groups on the body are clicked, imageMuscles function will fire
+  // $("area").on("click", imageMuscles);
+
+
+  function fromVoice() {
+    console.log("voice detected");
+  }
 
   if (annyang) {
   
   // Let's define a command.
 
   var commands = {
-    'biceps': function() { alert('Hello world!'); },
+    'biceps': function() {fromVoice();},
     'shoulder': function() { alert('Hello world!'); },
     'ribs': function() { alert('Hello world!'); },
     'chest': function() { alert('Hello world!'); },
