@@ -148,8 +148,8 @@ if (annyang) {
     // defining commands
     var commands = {
         'recipes with *tag': function(tag) {
-            console.log(tag);
             voiceRecipes();
+            console.log(tag);
         } 
     };
 
