@@ -133,7 +133,7 @@ function showDivs(n) {
 
 function voiceRecipes() {
     event.preventDefault();
-    getInput();
+    voiceInput();
     $("#recipesRow").empty();
 
     $.ajax({
