@@ -163,13 +163,13 @@ $(document).ready(function () {
   // Let's define a command.
 
   var commands = {
-    'show me *tag': function(tag) {
+    'exercises for *tag': function(tag) {
       tag = tag.charAt(0).toUpperCase() + tag.slice(1);
       if ($.inArray(tag, muscleName) != -1) {
         muscle = tag;
         displayExercise(muscle);
       } else {
-        $("#exerciseSpace").append("Muscle group is not detected");
+        $("#errorMessage").append("Muscle group is not detected");
       }
     }
 
