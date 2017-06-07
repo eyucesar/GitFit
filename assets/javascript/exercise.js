@@ -168,6 +168,8 @@ $(document).ready(function () {
       if ($.inArray(tag, muscleName) != -1) {
         muscle = tag;
         displayExercise(muscle);
+      } else {
+        $("#exerciseSpace").append("Muscle group is not detected");
       }
     }
 
