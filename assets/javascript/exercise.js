@@ -156,7 +156,11 @@ $(document).ready(function () {
   // $("area").on("click", imageMuscles);
 
 
-  function fromVoice() {
+  
+
+  if (annyang) {
+
+    function fromVoice() {
     console.log("voice detected");
     for (var i = 0; i < muscleName.length; i++) {
       if (commands.name === muscleName[i]) {
@@ -167,8 +171,6 @@ $(document).ready(function () {
       }
     }
   }
-
-  if (annyang) {
   
   // Let's define a command.
 
