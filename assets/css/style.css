@@ -208,8 +208,8 @@ area {
 
 #skitt-ui {
 	display: inline-flex!important;
-	width: 200px;
-	height: 40px;
+	width: 400px;
+	height: 60px;
 }
 
 @media (max-width: 1024px) {
