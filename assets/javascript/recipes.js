@@ -124,99 +124,20 @@ function showDivs(n) {
     });
 
     resetSearchResults();
-    };
-
-function voiceRecipes() {
-    event.preventDefault();
-    voiceInput();
-    $("#recipesRow").empty();
-
-    $.ajax({
-        url: queryURL,
-        method: "GET"
-            // Store all of the retrieved data inside of an object called "response"
-    }).done(function(response) {
-        if (response.hits.length === 0) return;
-
-        // Log the queryURL
-        var resultsElem, image, container, label, calories, link;
-        for (var i = 0; i < Math.max(8, response.hits.length); i++) {
-            recipeURL = response.hits[i].recipe.url;
-
-            resultsElem = $("<div>");
-            resultsElem.addClass("card");
-            if (i === 0) {
-                resultsElem.show();
-            } else {
-                resultsElem.hide();
-            }
-
-            image = $("<img>");
-            image.addClass("image");
-            image.attr("src", response.hits[i].recipe.image);
-            image.attr("alt", "Img");
-            resultsElem.append(image);
-
-
-            container = $("<div>");
-            container.addClass("recipeContainer");
-            resultsElem.append(container);
-
-
-            label = $("<p>");
-            label.text(response.hits[i].recipe.label);
-            label.addClass("label");
-            container.append(label);
-
-            // console.log("i= " + i + " label= " + response.hits[i].recipe.label);
-
-            calories = $("<p>Calories: " + Math.round(response.hits[i].recipe.calories) + "</p>");
-            calories.addClass("calories");
-            container.append(calories);
-
-            link = $("<a>");
-            link.attr("href", response.hits[i].recipe.url);
-            link.attr("target", "_blank");
-
-            link.addClass("link");
-            link.text(response.hits[i].recipe.url)
-            container.append(link);
-
-            // add cards to recipes row
-            $("#recipesRow").append(resultsElem);
-
-            // add buttons
-
-            buttonLeft = $("<button class='w3-button w3-black w3-display-left' onclick='showDivs(-1)'>&#10094</button>");
-            $("#recipesRow").append(buttonLeft);
-
-            buttonRight = $("<button class='w3-button w3-black w3-display-right' onclick='showDivs(1)'>&#10095;</button>");
-            $("#recipesRow").append(buttonRight);
-
-        }
-
-    });
-
-    resetSearchResults();
-    };
+};
 
 
 //voice detection code starts here
- if (annyang) {
-  
-  // defining commands
-  var commands = {
-    'recipes with *tag': function(tag) {
-    console.log("yay");
-    voiceRecipes();
-} 
-    
+if (annyang) {
 
-  };
+    // defining commands
+    var commands = {
+        'recipes with *tag': function(tag) {
+        console.log(tag);
+        } 
+    };
 
-  function voiceInput() {
-    inputVal = tag;
-    queryURL = baseURL + inputVal + "&limit=" + resultCount + "&app_ID" + app_ID + "&app_key=" + appKey;
+
 }
 
     // Add our commands to annyang
