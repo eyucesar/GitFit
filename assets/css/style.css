@@ -206,8 +206,10 @@ area {
 	text-align: center;
 }
 
-#skitt-listening-box {
-      display: inline-flex!important;
+#skitt-ui {
+	display: inline-flex!important;
+	width: 200px;
+	height: 40px;
 }
 
 @media (max-width: 1024px) {
