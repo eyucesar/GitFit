@@ -180,7 +180,8 @@ $(document).ready(function () {
     function fromVoice() {
     console.log("voice detected");
     for (var i = 0; i < muscleName.length; i++) {
-      if (commands.name === muscleName[i]) {
+      for (var name in commands)
+      if (name === muscleName[i]) {
         //testing
         console.log("voice loop is running");
         // muscle = biceps;
