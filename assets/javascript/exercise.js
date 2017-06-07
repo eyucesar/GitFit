@@ -138,19 +138,19 @@ $(document).ready(function () {
   });
 
   if (annyang) {
-  // Let's define our first command. First the text we expect, and then the function it should call
-  var commands = {
-    'chest exercises': function() {
-      $("#exerciseSpace").append("Chest exercises will go here on voice command!");
-      console.log("sound test");
-    }
-  };
-
   // Add our commands to annyang
-  annyang.addCommands(commands);
+  annyang.addCommands({
+    'hello': function() { alert('Hello world!'); }
+  });
 
-  // Start listening. You can call this here, or attach this call to an event, button, etc.
-  annyang.start();
+  // Tell KITT to use annyang
+  SpeechKITT.annyang();
+
+  // Define a stylesheet for KITT to use
+  SpeechKITT.setStylesheet('//cdnjs.cloudflare.com/ajax/libs/SpeechKITT/0.3.0/themes/flat.css');
+
+  // Render KITT's interface
+  SpeechKITT.vroom();
 }
 
 });
