@@ -150,8 +150,8 @@ $(document).ready(function () {
   SpeechKITT.setStylesheet('//cdnjs.cloudflare.com/ajax/libs/SpeechKITT/0.3.0/themes/flat.css');
 
   // Add instructional texts
-  SpeechKITT.setInstructionsText('Some commands to try…');
-  SpeechKITT.setSampleCommands(['Show directions', 'Call restaurant']);
+  SpeechKITT.setInstructionsText('What muscle group are you looking for?');
+  SpeechKITT.setSampleCommands(['Quad exercises', 'Chest exercises']);
 
   // Render KITT's interface
   SpeechKITT.vroom();
