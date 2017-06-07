@@ -177,10 +177,12 @@ $(document).ready(function () {
     'obliques': function() {fromVoice();}
     }
 
+    var keyNames = Object.keys(commands);
+
     function fromVoice() {
     console.log("voice detected");
     for (var i = 0; i < muscleName.length; i++) {
-      for (var name in commands)
+      for (var name in commands) {
       if (name === muscleName[i]) {
         //testing
         console.log("voice loop is running");
