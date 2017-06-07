@@ -152,20 +152,19 @@ $(document).ready(function () {
   // Let's define a command.
 
   var commands = {
-    'biceps': function() { alert('Hello world!'); }
-    'shoulder': function() { alert('Hello world!'); }
-    'ribs': function() { alert('Hello world!'); }
-    'chest': function() { alert('Hello world!'); }
-    'triceps': function() { alert('Hello world!'); }
-    'abs': function() { alert('Hello world!'); }
-    'calves': function() { alert('Hello world!'); }
-    'glutes': function() { alert('Hello world!'); }
-    'quads': function() { alert('Hello world!'); }
-    'hamstring': function() { alert('Hello world!'); }
-    'lats': function() { alert('Hello world!'); }
-    'obliques': function() { alert('Hello world!');
+    'biceps': function() { alert('Hello world!'); },
+    'shoulder': function() { alert('Hello world!'); },
+    'ribs': function() { alert('Hello world!'); },
+    'chest': function() { alert('Hello world!'); },
+    'triceps': function() { alert('Hello world!'); },
+    'abs': function() { alert('Hello world!'); },
+    'calves': function() { alert('Hello world!'); },
+    'glutes': function() { alert('Hello world!'); },
+    'quads': function() { alert('Hello world!'); },
+    'hamstring': function() { alert('Hello world!'); },
+    'lats': function() { alert('Hello world!'); },
+    'obliques': function() { alert('Hello world!'); }
     }
-  
   };
 
   // Add our commands to annyang
