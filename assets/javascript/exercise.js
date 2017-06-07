@@ -163,13 +163,13 @@ $(document).ready(function () {
   // Let's define a command.
 
   var commands = {
-    'show me *tag': fromVoice,
+    'show me *tag': fromVoice
     
   };
 
     var keyNames = Object.keys(commands);
 
-    function fromVoice() {
+    var fromVoice = function(tag) {
       console.log(tag);
       
     }
