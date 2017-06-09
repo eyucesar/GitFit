@@ -37,6 +37,14 @@
     </nav>
     <!-- container for everything but nav bar -->
     <div class="container">
+
+        <div class="row">
+          <div class="jumbotron">
+            <h1 id="jumbText">Health Calculators</h1>
+            <h2 id="jumbSubText">guage your health status &amp; work towards a better you</h2>
+          </div>
+        </div>
+
         <div class="row">
             <!-- BMI drop down -->
             <div class="col-md-4">
@@ -198,7 +206,7 @@
                         <form action="">
                             <div class="form-group">
                                 <h4>Weight</h4>
-                                <input type="radio" name="weight" id="weightKg" value="Kg" checked="checked">
+                                <input type="radio" name="weight" id="weightKg" value="Kg" checked>
                                 <label for="weightKg" class="inlineWeight">Lbs to kg</label>&nbsp;
                                 <input type="radio" name="weight" id="weightLbs" value="Lbs">
                                 <label for="weightLbs" class="inlineWeight">Kg to lbs</label>
@@ -224,6 +232,12 @@
                         </form>
                     </div>
                 </div>
+
+                <!-- workout log and the nutrition log -->
+                <div class="container" id="pdfs"">
+                    <a href="assets/images/gitfit-nutrition-log.pdf" target="_blank" class="pdfLinks"><h1 class="pdfText">Download the nutrition log.</h1></a>
+                    <a href="assets/images/gitfit-workout-log.pdf" target="_blank" class="pdfLinks"><h1 class="pdfText">Download the workout log.</h1></a>
+                </div>
                 <!-- div to hold all results as user gets results from calculator -->
                 <!-- no form, dynamically generated divs:
         <div class="container" id="result-info">
@@ -240,6 +254,7 @@
                     <input type="text" class="form-control" id="cal-intake-results" placeholder="" name="cal-intake" value="">
                     <input type="text" class="form-control" id="protein-results" placeholder="" name="protein" value="">
                 </div>
+                
             </div>
         </div>
     </div>
@@ -253,9 +268,10 @@
     <!-- firebase link -->
     <script src="https://www.gstatic.com/firebasejs/4.1.1/firebase.js"></script>
     <!-- local javascript file -->
+    <script src="assets/javascript/index.js"></script>
     <script src="assets/javascript/health.js"></script>
+    <script src="assets/javascript/recipes.js"></script>
     <script src="assets/javascript/exercise.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/annyang/2.6.0/annyang.min.js"></script>
 </body>
 
 </html>
