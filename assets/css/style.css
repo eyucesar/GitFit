@@ -223,11 +223,11 @@ area {
 
 /***** health/calculators page styles *****/
 
-.jumbotron {
+#health-jumbo {
 	text-align: center;
 	color: #fafff2;
 	background-color: #cfeda1;
-	background: url(http://www.thedietitiandaily.com/wp-content/uploads/2016/04/r-healthy-food-large570.jpg) no-repeat center center;
+	background: url(../images/weights.jpg) no-repeat center center;
     -webkit-background-size: cover;    
     background-size: cover;
 }
@@ -266,7 +266,7 @@ area {
 }
 
 button#collapseButton:hover {
-	background-color: #92e6ff;
+	background-color: #70d6f4;
 }
 
 #pdfs {
@@ -321,6 +321,26 @@ button#collapseButton:hover {
     margin-bottom: 12px;
     width: 60%;
     height: 50%;
+}
+
+#recipes-jumbo {
+    text-align: center;
+    color: #fafff2;
+    background-color: #cfeda1;
+    background: url(../images/food.jpg) no-repeat center center;
+    -webkit-background-size: cover;    
+    background-size: cover;
+}
+
+#jumbText {
+    font-size: 75px;
+    font-weight: bolder;
+    text-shadow: 4px 4px 8px #0d5f7c;
+}
+
+#jumbSubText {
+    font-size: 28px;
+    font-weight: bolder;
 }
 
 .recipeContainer {
@@ -379,9 +399,20 @@ div.recipe-inline {
 }
 
 div.recipe-inline img {
-    width:25vw;
+    width: 25vw;
     height: 35vh;
 }
+
+/***** footer styles *****/
+
+.content {
+  min-height: calc(100vh - 200px);
+  margin-bottom: 20px;
+}
+.footer {
+  height: 50px;
+}
+
 
 @media (max-width: 1024px) {
     /*Need something here*/
@@ -394,5 +425,39 @@ div.recipe-inline img {
     /*currently the nav items are disappearing at this width, fix that*/
     #anatomy {
         margin: 0;
+    }
+
+    .navbar-default .navbar-nav>li>a {
+        font-size: 22px;
+        width: 20%;
+        background-color: #e8f9ff;
+        width: 100%;
+        padding: 10px;
+        border-bottom: 1px solid #b8dfed;
+        text-align: center;
+    }
+
+    .navbar-default .navbar-nav>li>a:hover{
+        background-color: #e8f9ff;
+    }
+
+    #logo {
+        margin: 0 125px 0 125px;
+    }
+
+    .container {
+        margin-top: 120px;
+    }
+
+    #muscleMenu {
+        margin: 10px 120px 0 120px;
+    }
+
+    h5 {
+        margin: 10px 140px 0 140px;
+    }
+
+    #mic {
+        margin: 10px 100px 0 100px;
     }
 }

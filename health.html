@@ -13,7 +13,8 @@
     <!-- Google fonts link -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans|PT+Sans|Ubuntu" rel="stylesheet">
     <!-- viewport link -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/annyang/2.6.0/annyang.min.js"></script>
 </head>
 
 <body>
@@ -24,7 +25,7 @@
                 <a href="index.html"><img id="logo" src="assets/images/gitfit_logo.png" /></a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <div>
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="index.html">Body</a></li>
                     <li><a href="health.html">Health</a></li>
@@ -39,7 +40,7 @@
     <div class="container">
 
         <div class="row">
-          <div class="jumbotron">
+          <div class="jumbotron" id="health-jumbo">
             <h1 id="jumbText">Health Calculators</h1>
             <h2 id="jumbSubText">guage your health status &amp; work towards a better you</h2>
           </div>
@@ -255,12 +256,11 @@
                     <input type="text" class="form-control" id="protein-results" placeholder="" name="protein" value="">
                 </div>
                 
-            </div>
+          </div>
         </div>
+      </div>
     </div>
-    </div>
-    <br>
-    <footer>&copy;2017 Ebru Yucesar, Anuradha Ramachandra, Rachel Vaughan, Raquel Rodriguez, Jamie Gelo</footer>
+    <footer class="footer">&copy;2017 Ebru Yucesar, Anuradha Ramachandra, Rachel Vaughan, Raquel Rodriguez, Jamie Gelo</footer>
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery.js"></script>
     <!-- bootstrap -->
@@ -268,7 +268,6 @@
     <!-- firebase link -->
     <script src="https://www.gstatic.com/firebasejs/4.1.1/firebase.js"></script>
     <!-- local javascript file -->
-    <script src="assets/javascript/index.js"></script>
     <script src="assets/javascript/health.js"></script>
     <script src="assets/javascript/recipes.js"></script>
     <script src="assets/javascript/exercise.js"></script>
