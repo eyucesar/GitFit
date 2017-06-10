@@ -75,37 +75,26 @@ a {
 
 a:link.Recipe {
     padding-left: 0px;
-    color: #000000;
-    text-decoration: underline;
+    color: #0878a0;
+    text-decoration: none;
+    font-size: 16px;
 }
 
-a:visited.Recipe {
+a.Recipe {
     padding-left: 0px;
-    color: #008000;
-    text-decoration: underline;
+    color: #0878a0;
+    text-decoration: none;
+    font-size: 16px;
+    text-align: center; 
 }
+
 
 a:hover.Recipe {
     padding-left: 0px;
-    color: #ff0000; 
+    color: black; 
     text-decoration: none; 
 }
 
-a:active.Recipe {
-    padding-left: 0px;
-    color: #0000ff;
-    text-decoration: underline;
-}
-
-h3.recentHistory {
-    width: 200px;
-    height: 25px;
-    margin: auto;
-    font-size: 18px;
-    text-align: right;
-    background-color: #white;
-
-}
 
 h1,
 h5 {
@@ -115,7 +104,6 @@ h5 {
 h4 {
     color: black;
     font-weight: bolder;
-    margin-left: 50px;
     text-align: center;
     font-size: 19px;
 }
@@ -149,9 +137,9 @@ h5 {
 
 .input-group .form-control:first-child {
     height: 42px;
-    width: 300px;
+    width: 360px;
+    margin-left: 20px;
 }
-
 
 /*form text box borders*/
 
@@ -165,7 +153,6 @@ footer {
     font-size: 12px;
     color: black;
 }
-
 
 /***** main index page styles *****/
 
@@ -359,6 +346,18 @@ button#collapseButton:hover {
     border: none;
 }
 
+.col-md-3 {
+    padding: 20px 30px 20px 30px;
+}
+
+.recipes:hover {
+    border: 7px solid #61cef4;
+}
+
+.recipes {
+    border: 2px solid white;
+}
+
 .label {
     color: white;
     font-size: 20px;
@@ -408,9 +407,9 @@ div.recipe-inline {
     padding: 10px;
 }
 
-div.recipe-inline img {
-    width: 25vw;
-    height: 35vh;
+img {
+    max-width: 100%;
+    height: auto;
 }
 
 /***** footer styles *****/
@@ -419,6 +418,7 @@ div.recipe-inline img {
   min-height: calc(100vh - 200px);
   margin-bottom: 20px;
 }
+
 .footer {
   height: 50px;
 }

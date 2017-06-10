@@ -5,30 +5,6 @@ var resultCount = 30;
 var inputVal = "";
 var queryURL = "";
 
-// Initialize Firebase
-var config = {
-    apiKey: "AIzaSyB_JQagylAT6I5kjHi0lx34v_PTvXMG8Dw",
-    authDomain: "gitfit-58bb2.firebaseapp.com",
-    databaseURL: "https://gitfit-58bb2.firebaseio.com",
-    projectId: "gitfit-58bb2",
-    storageBucket: "gitfit-58bb2.appspot.com",
-    messagingSenderId: "536732614585"
-};
-firebase.initializeApp(config);
-
-//set variable to refer to database
-var db = firebase.database();
-var recentSearches = $("#input-field").val();
-
-db.ref("/recentSearches").on("value", function(snapshot) {
-    
-    if (snapshot.child("recentSearches").exists()) {
-        $("#recentSearches").html(snapshot.val().recentSearches);
-    }
-    console.log(recentSearches);
-});
-
-
 //function to clear results field
 function resetSearchResults() {
     $("#input-field").val("");
@@ -66,14 +42,21 @@ function fetchResults() {
         for (var i = 0; i < Math.min(30, response.hits.length); i++) {
             recipeURL = response.hits[i].recipe.url;
             recipeName = response.hits[i].recipe.label;
+            if (recipeName.length > 30) {
+                var length = 30;
+                recipeName = recipeName.substring(0, length);
+                recipeName = recipeName + "...";
+            } else {
+                recipeName = response.hits[i].recipe.label;
+            }
             recipeImage = response.hits[i].recipe.image;
             recipeYield = response.hits[i].recipe.yield;
             recipeCalories = Math.floor(response.hits[i].recipe.calories / recipeYield);
 
             if (recipeCalories < 500) {
-                displayImage = "<a class='Recipe' href='" + recipeURL + "' target='_blank'><img src='" + recipeImage + "'/></a>";
+                displayImage = "<a class='Recipe' href='" + recipeURL + "' target='_blank'><img class='recipes' src='" + recipeImage + "'/></a>";
                 displayURL = "<a class='Recipe' href='" + recipeURL + "' target='_blank'>" + recipeName + "</a>";
-                $("#recipesRow").prepend("<div class='recipe-inline'>" + displayImage + "<br>" + displayURL + "<br>Calories Per Serving: " + recipeCalories + "</div>");
+                $("#recipesRow").prepend("<div class='col-md-3' class='recipe-inline'>" + displayImage + "<br><br>" + displayURL + "<br>Calories Per Serving: " + recipeCalories + "</div>");
             } 
         }
     });
