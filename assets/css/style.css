@@ -97,6 +97,16 @@ a:active.Recipe {
     text-decoration: underline;
 }
 
+h3.recentHistory {
+    width: 200px;
+    height: 25px;
+    margin: auto;
+    font-size: 18px;
+    text-align: right;
+    background-color: #white;
+
+}
+
 h1,
 h5 {
     font-size: 18px;

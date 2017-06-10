@@ -8,9 +8,10 @@
     <link rel="shortcut icon" href="assets/images/gitfit_favicon.png" />
     <link href="https://fonts.googleapis.com/css?family=Open+Sans|PT+Sans|Ubuntu" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/b668c475b8.css">
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/annyang/2.6.0/annyang.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/annyang/2.6.0/annyang.min.js"></script>
 </head>
 
 <body>
@@ -42,7 +43,7 @@
       </div>
 
         <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-4">
                 <div class="input-group">
                     <input type="text" id="input-field" class="form-control" placeholder="Enter Ingredient">
                     <span class="input-group-btn">
@@ -50,19 +51,27 @@
             </span>
                 </div>
             </div>
+            <div class="col-md-4">
+                <div id="mic"><i class="fa fa-microphone fa-lg" aria-hidden="true"></i>&nbsp;&nbsp;You can search with voice commands as well. For example say: recipes with eggs, recipes with chicken...</div>
+            </div>
+            <div class="col-md-4" id="userResults">
+                <h3 class="recentHistory"><strong>Recent Search:</strong> <span id="recentSearches"></span></h3>
+            </div>    
         </div>
+
         <div class="row" id="recipesRow">
-            <div class="col-md-8" id="recipesRow"></div>
-            <div class="col-md-4" id="recentSearches"></div>
+            <div class="col-md-12" id="recipesRow"></div>
+            </div>
         </div>
-    </div>
   
   <footer class="footer">&copy;2017 Ebru Yucesar, Anuradha Ramachandra, Rachel Vaughan, Raquel Rodriguez, Jamie Gelo</footer>
+    <!-- jQuery -->
     <script src="https://code.jquery.com/jquery.js"></script>
+    <!-- bootstrap -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-
+    <!-- firebase link -->
+    <script src="https://www.gstatic.com/firebasejs/4.1.1/firebase.js"></script>
+    <!--local javascript file -->
     <script src="assets/javascript/recipes.js"></script>
-   
 </body>
-
 </html>

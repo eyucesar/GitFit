@@ -6,6 +6,27 @@ var inputVal = "";
 var queryURL = "";
 
 // Initialize Firebase
+var config = {
+    apiKey: "AIzaSyB_JQagylAT6I5kjHi0lx34v_PTvXMG8Dw",
+    authDomain: "gitfit-58bb2.firebaseapp.com",
+    databaseURL: "https://gitfit-58bb2.firebaseio.com",
+    projectId: "gitfit-58bb2",
+    storageBucket: "gitfit-58bb2.appspot.com",
+    messagingSenderId: "536732614585"
+};
+firebase.initializeApp(config);
+
+//set variable to refer to database
+var db = firebase.database();
+var recentSearches = $("#input-field").val();
+
+db.ref("/recentSearches").on("value", function(snapshot) {
+    
+    if (snapshot.child("recentSearches").exists()) {
+        $("#recentSearches").html(snapshot.val().recentSearches);
+    }
+    console.log(recentSearches);
+});
 
 
 //function to clear results field
@@ -64,6 +85,28 @@ $(document).ready(function() {
 
     $("#input-field").on("keypress", searchKeypress);
 
-    $("button").on("click", fetchAndShowResults);
-
+    $("#recipeSearchButton").on("click", fetchAndShowResults);
 });
+
+//voice commands function
+if (annyang) {
+// defining commands
+    var commands = {
+        'recipes with *tag': function(tag) {
+            console.log(tag);
+            function voiceQuery() {
+                queryURL = baseURL + tag + "&limit=" + resultCount + "&app_ID" + app_ID + "&app_key=" + appKey;
+            }
+            $("#recipesRow").empty();
+            voiceQuery();
+            fetchResults();
+            resetSearchResults();
+        }
+    };
+
+    // Add our commands to annyang
+    annyang.addCommands(commands);
+ 
+    // Start listening. 
+    annyang.start();
+}
