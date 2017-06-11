@@ -149,7 +149,7 @@ $(document).ready(function() {
                     displayExercise(muscle);
                 } else {
                     $("#errorMessage").empty();
-                    $("#errorMessage").append("<i class='fa fa-exclamation fa-lg' aria-hidden=true'></i>&nbsp;&nbsp;Muscle group is not detected. Please try again.");
+                    $("#errorMessage").append("<br><i class='fa fa-exclamation fa-lg' aria-hidden=true'></i>&nbsp;&nbsp;Muscle group is not detected. Please try again.");
                     $("#exerciseSpace").empty();
                 }
             }
